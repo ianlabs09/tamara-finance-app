@@ -1,0 +1,310 @@
+/* 1.CSS VARIABLES (Palet Warna Resmi TAMARA) */
+
+:root {
+    --primary-blue: #192b8c;
+    --light-blue: #00a8e8;
+    --pink-accent: #e81cff;
+    --success-green: #10b981;
+    --danger-red: #ef4444;
+    --bg-color: #f3f5f8;
+    --text-main: #334155;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* 2. RESET & BASE LAYOUT */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    display: flex;
+    /* Membuat Sidebar (kiri) & Main Content (kanan) bersebelahan */
+    height: 100vh;
+    /* Mengunci tinggi aplikasi setinggi layar penuh */
+}
+
+/* 3. SIDEBAR (Panel Menu Kiri) */
+.sidebar {
+    width: 260px;
+    background-color: #ffffff;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.03);
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    z-index: 10;
+}
+
+.logo-container {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    padding: 0 20px;
+}
+
+.logo-container img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.menu-container {
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-item {
+    padding: 12px 20px;
+    margin-bottom: 5px;
+    border-radius: 8px;
+    color: var(--text-muted);
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.menu-item:hover {
+    background-color: #f8fafc;
+    color: var(--primary-blue);
+}
+
+.menu-item.active {
+    background-color: #ebf5ff;
+    color: var(--primary-blue);
+    border-left: 4px solid var(--light-blue);
+    border-radius: 0 8px 8px 0;
+}
+
+/* 4. MAIN CONTENT & TOPBAR (Area Kanan) */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.topbar {
+    height: 70px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 35px;
+}
+
+.topbar-title {
+    font-weight: 600;
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.user-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: var(--light-blue);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.content-area {
+    padding: 35px;
+    flex: 1;
+    overflow-y: auto;
+    /* Hanya area konten ini yang bisa di-scroll jika isinya panjang */
+}
+
+.page-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 0 25px 0;
+    color: var(--primary-blue);
+}
+
+.card-container {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 35px;
+}
+
+.card {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    border-top: 4px solid transparent;
+}
+
+/* Variasi warna garis di atas kartu */
+.card-blue {
+    border-top-color: var(--light-blue);
+}
+
+.card-pink {
+    border-top-color: var(--pink-accent);
+}
+
+.card-green {
+    border-top-color: var(--success-green);
+}
+
+.card-title {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.card-value {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+/* 6. DASHBOARD BOTTOM SECTION (Grafik & Table) */
+
+.bottom-section {
+    display: flex;
+    gap: 25px;
+}
+
+.chart-placeholder {
+    flex: 1.5;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    min-height: 280px;
+}
+
+.chart-title {
+    font-weight: 700;
+    color: var(--primary-blue);
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.chart-box {
+    width: 100%;
+    flex: 1;
+    background: linear-gradient(180deg, rgba(0, 168, 232, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+    border-bottom: 2px solid var(--light-blue);
+    position: relative;
+}
+
+.chart-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    border-top: 3px dashed var(--light-blue);
+    opacity: 0.7;
+}
+
+/* 7. REUSABLE TABLE & BADGES (Tabel & Label Status) */
+
+.table-container {
+    flex: 1;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.table-title {
+    font-weight: 700;
+    color: var(--primary-blue);
+    padding: 25px 25px 15px 25px;
+    font-size: 16px;
+    margin: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 14px 25px;
+    text-align: left;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+th {
+    background-color: #f8fafc;
+    color: var(--text-muted);
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+td {
+    color: var(--text-main);
+    font-size: 13px;
+}
+
+tr:hover {
+    background-color: #f8fafc;
+}
+
+.ref-code {
+    font-weight: 600;
+}
+
+/* Komponen Badge Status */
+
+.badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    display: inline-block;
+}
+
+.badge-lunas {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.badge-belum {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+.badge-po {
+    background-color: #e0f2fe;
+    color: #075985;
+}

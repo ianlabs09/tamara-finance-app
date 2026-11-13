@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Aplikasi Keuangan TAMARA</title>
+
+    <!-- 1. Memanggil Font 'Inter' dari Google Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- 2. Menghubungkan ke file CSS terpusat kita -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- BAGIAN KIRI: Sidebar Navigasi -->
+    <aside class="sidebar">
+        <div class="logo-container">
+            <img src="assets/img/logo-trid.png" alt="Logo Tamara">
+        </div>
+
+        <nav class="menu-container">
+            <a href="index.html" class="menu-item active">Dashboard</a>
+            <a href="master-data.html" class="menu-item">Master Data</a>
+            <a href="penjualan.html" class="menu-item">Modul Penjualan</a>
+            <a href="keuangan.html" class="menu-item">Modul Keuangan</a>
+            <a href="laporan.html" class="menu-item">Laporan</a>
+            <a href="pengaturan.html" class="menu-item">Pengaturan</a>
+        </nav>
+    </aside>
+
+    <!-- BAGIAN KANAN: Konten Utama -->
+    <main class="main-content">
+
+        <!-- Bilah Atas (Topbar) -->
+        <header class="topbar">
+            <div class="topbar-title">Aplikasi Keuangan v1.0</div>
+            <div class="user-profile">
+                <span class="user-name">Admin Keuangan</span>
+                <div class="avatar">AK</div>
+            </div>
+        </header>
+
+        <!-- Area Isi Halaman-->
+        <section class="content-area">
+            <h1 class="page-title">Dashboard Overview</h1>
+
+            <!-- BAGIAN 1: 3 Kartu Ringkasan Finansial -->
+            <div class="card-container">
+                <div class="card card-blue">
+                    <div class="card-title">Total Saldo Kas</div>
+                    <div class="card-value">Rp 125.500.000</div>
+                </div>
+                <div class="card card-pink">
+                    <div class="card-title">Total Piutang (Belum Dibayarkan)</div>
+                    <div class="card-value">Rp 45.200.000</div>
+                </div>
+                <div class="card card-green">
+                    <div class="card-title">Pendapatan Bulan Ini</div>
+                    <div class="card-value">Rp 82.000.000</div>
+                </div>
+
+            </div>
+
+            <!-- BAGIAN 2: Area Grafik (Kiri) & Table Aktivitas (Kanan) -->
+            <div class="bottom-section">
+
+                <!-- Kolom Kiri: Grafik Arus Kas -->
+                <div class="chart-placeholder">
+                    <div class="chart-title">Grafik Arus Kas (Bulan Ini)</div>
+                    <div class="chart-box">
+                        <div class="chart-line"></div>
+                    </div>
+                </div>
+
+                <!-- Kolom Kanan: Tabel Aktivitas Terkini -->
+                <div class="table-container">
+                    <h2 class="table-title">Aktivitas Terkini</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>No. Referensi</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="ref-code">INV/2026/10/001</td>
+                                <td><span class="badge badge-lunas">LUNAS</span></td>
+                            </tr>
+                            <tr>
+                                <td class="ref-code">INV/2026/10/002</td>
+                                <td><span class="badge badge-belum">BELUM BAYAR</span></td>
+                            </tr>
+                            <tr>
+                                <td class="ref-code">PO-IN-009</td>
+                                <td><span class="badge badge-po">PO MASUK</span></td>
+                            </tr>
+                            <tr>
+                                <td class="ref-code">INV/2026/10/003</td>
+                                <td><span class="badge badge-lunas">LUNAS</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
