@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengaturan - Aplikasi Keuangan TAMARA</title>
+
+    <!-- 1. Memanggil Font 'Inter' dari Google Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- 2. Menghubungkan ke file CSS terpusat kita -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- BAGIAN KIRI: Sidebar Navigasi -->
+    <aside class="sidebar">
+        <div class="logo-container">
+            <img src="assets/img/logo-trid.png" alt="Logo Tamara">
+        </div>
+
+        <nav class="menu-container">
+            <a href="index.html" class="menu-item">Dashboard</a>
+            <a href="master-data.html" class="menu-item">Master Data</a>
+            <a href="penjualan.html" class="menu-item">Modul Penjualan</a>
+            <a href="keuangan.html" class="menu-item">Modul Keuangan</a>
+            <a href="laporan.html" class="menu-item">Laporan</a>
+            <a href="pengaturan.html" class="menu-item active">Pengaturan</a>
+        </nav>
+    </aside>
+    <main class="main-content">
+
+        <!-- Bilah Atas (Topbar) -->
+        <header class="topbar">
+            <div class="topbar-title">Pengaturan Sistem</div>
+            <div class="user-profile">
+                <span class="user-name">Admin Keuangan</span>
+                <div class="avatar">AK</div>
+            </div>
+        </header>
+
+        <!-- Area Isi Halaman -->
+        <section class="content-area">
+            <h1 class="page-title">Profil Perusahaan</h1>
+
+            <!-- Kartu Formulir Pengaturan -->
+            <div class="settings-card">
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label for="company-name" class="form-label">Nama Perusahaan (Akan tercetak di Invoice)</label>
+                        <input type="text" id="company-name" class="form-control" value="Tamara Royal Inti Digital">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="company-address" class="form-label">Alamat Lengkap</label>
+                        <textarea id="company-address" class="form-control"
+                            rows="3">Gedung Perkantoran Sudirman, Lt 12. Jakarta Selatan</textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bank-info" class="form-label">Informasi Rekening Bank (Untuk Pembayaran)</label>
+                        <input type="text" id="bank-info" class="form-control"
+                            value="BCA - 1234567890 a/n PT Tamara Royal Inti Digital">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ppn-rate" class="form-label">Pajak Standar (PPN %)</label>
+                        <input type="number" id="ppn-rate" class="form-control input-short" value="11">
+                    </div>
+
+                    <button type="submit" class="btn-save">Simpan Perubahan</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+</body>
+
+</html>

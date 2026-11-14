@@ -308,3 +308,115 @@ tr:hover {
     background-color: #e0f2fe;
     color: #075985;
 }
+
+/* 8. FORMS & SETTINGS CARD (Halaman Pengaturan) */
+
+.settings-card {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    max-width: 700px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-main);
+    margin-bottom: 8px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: var(--text-main);
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.form-control:focus {
+    border-color: var(--light-blue);
+}
+
+.input-short {
+    width: 100px;
+}
+
+.btn-save {
+    background-color: var(--primary-blue);
+    color: #ffffff;
+    border: none;
+    padding: 12px 15px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.2s ease;
+}
+
+.btn-save:hover {
+    background-color: #13206b;
+}
+
+/* 9. REPORT GRID (Halaman Laporan Keuangan) */
+
+.report-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 26px;
+}
+
+.report-card {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    border-top-width: 4px;
+    border-top-style: solid; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.report-title {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 0 15px 0;
+    color: var(--primary-blue);
+}
+
+.report-desc {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin: 0 0 20px 0;
+    line-height: 1.5;
+}
+
+.btn-download {
+    width: 100%;
+    background-color: var(--pink-accent);
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-download:hover {
+    background-color: #c914dd;
+}

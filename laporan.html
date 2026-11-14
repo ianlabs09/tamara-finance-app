@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laporan - Aplikasi Keuangan TAMARA</title>
+
+    <!-- 1. Memanggil Font 'Inter' dari Google Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- 2. Menghubungkan ke file CSS terpusat kita -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- BAGIAN KIRI: Sidebar Navigasi -->
+    <aside class="sidebar">
+        <div class="logo-container">
+            <img src="assets/img/logo-trid.png" alt="Logo Tamara">
+        </div>
+
+        <nav class="menu-container">
+            <a href="index.html" class="menu-item">Dashboard</a>
+            <a href="master-data.html" class="menu-item">Master Data</a>
+            <a href="penjualan.html" class="menu-item">Modul Penjualan</a>
+            <a href="keuangan.html" class="menu-item">Modul Keuangan</a>
+            <a href="laporan.html" class="menu-item active">Laporan</a>
+            <a href="pengaturan.html" class="menu-item">Pengaturan</a>
+        </nav>
+    </aside>
+    <main class="main-content">
+
+        <!-- Bilah Atas (Topbar) -->
+        <header class="topbar">
+            <div class="topbar-title">Pusat Laporan</div>
+            <div class="user-profile">
+                <span class="user-name">Admin Keuangan</span>
+                <div class="avatar">AK</div>
+            </div>
+        </header>
+
+        <section class="content-area">
+            <h1 class="page-title">Laporan Keuangan</h1>
+
+            <!-- Grid 3 Kolom Kartu Laporan -->
+            <div class="report-grid">
+
+                <!-- Kartu 1: Laporan Arus Kas -->
+                <div class="report-card card-blue">
+                    <h2 class="report-title">Laporan Arus Kas</h2>
+                    <p class="report-desc">Rekapitulasi seluruh uang masuk dan uang keluar berdasarkan kategori pada
+                        periode tertentu.</p>
+                    <button type="button" class="btn-download">Unduh PDF / Excel</button>
+                </div>
+
+                <!-- Kartu 2: Laporan Piutang -->
+                <div class="report-card card-pink">
+                    <h2 class="report-title">Laporan Piutang</h2>
+                    <p class="report-desc">Daftar klien yang belum melakukan pembayaran invoice beserta umur jatuh
+                        temponya.</p>
+                    <button type="button" class="btn-download">Unduh PDF / Excel</button>
+                </div>
+
+                <!-- Kartu 3: Laporan Laba/Rugi -->
+                <div class="report-card card-green">
+                    <h2 class="report-title">Laporan Laba/Rugi</h2>
+                    <p class="report-desc">Ringkasan total pendapatan dikurangi pengeluaran operasional perusahaan.</p>
+                    <button type="button" class="btn-download">Unduh PDF / Excel</button>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+</body>
+
+</html>
