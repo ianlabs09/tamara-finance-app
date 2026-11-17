@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Data - Aplikasi Keuangan TAMARA</title>
+
+    <!-- 1. Memanggil Font 'Inter' dari Google Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- 2. Menghubungkan ke file CSS terpusat kita -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- BAGIAN KIRI: Sidebar Navigasi -->
+    <aside class="sidebar">
+        <div class="logo-container">
+            <img src="assets/img/logo-trid.png" alt="Logo Tamara">
+        </div>
+
+        <nav class="menu-container">
+            <a href="index.html" class="menu-item">Dashboard</a>
+            <a href="master-data.html" class="menu-item active">Master Data</a>
+            <a href="penjualan.html" class="menu-item">Modul Penjualan</a>
+            <a href="keuangan.html" class="menu-item">Modul Keuangan</a>
+            <a href="laporan.html" class="menu-item">Laporan</a>
+            <a href="pengaturan.html" class="menu-item">Pengaturan</a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <!-- Bilah Atas (Topbar) -->
+        <header class="topbar">
+            <div class="topbar-title">Master Data / Data Klien</div>
+            <div class="user-profile">
+                <span class="user-name">Admin Keuangan</span>
+                <div class="avatar">AK</div>
+            </div>
+        </header>
+
+        <section class="content-area">
+            <h1 class="page-title">Master Data Perusahaan</h1>
+
+            <!-- Navigasi Tab -->
+            <div class="tabs">
+                <button type="button" class="tab active" data-target="tab-klien">Data Klien</button>
+                <button type="button" class="tab" data-target="tab-vendor">Data Vendor</button>
+                <button type="button" class="tab" data-target="tab-layanan">Data Layanan</button>
+            </div>
+
+            <!-- KONTENT TAB 1: DATA KLIEN -->
+            <div id="tab-klien" class="tab-content active">
+                <div class="action-bar">
+                    <input type="text" class="search-input" placeholder="Cari Nama Perusahaan atau PIC...">
+                    <button type="button" class="btn btn-primary">+ Tambah Klien</button>
+                </div>
+
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nama Perusahaan</th>
+                                <th>Nama PIC</th>
+                                <th>Nomor Telepon</th>
+                                <th>Email</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="ref-code">PT. Teknologi Nusantara</td>
+                                <td>Budi Susanto</td>
+                                <td>0812-3456-7890</td>
+                                <td>finance@teknologi.co.id</td>
+                                <td>
+                                    <span class="action-link">Edit</span>
+                                    <span class="action-link text-danger">Hapus</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="ref-code">Dinas Komunikasi & Informatika</td>
+                                <td>Ibu Ratna</td>
+                                <td>(021) 555-1234</td>
+                                <td>info@diskominfo.go.id</td>
+                                <td>
+                                    <span class="action-link">Edit</span>
+                                    <span class="action-link text-danger">Hapus</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- KONTEN TAB 2: DATA VENDOR -->
+            <div id="tab-vendor" class="tab-content">
+                <div class="action-bar">
+                    <input type="text" class="search-input" placeholder="Cari Nama Vendor atau Layanan...">
+                    <button type="button" class="btn btn-primary">+ Tambah Vendor</button>
+                </div>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nama Vendor</th>
+                                <th>Kategori</th>
+                                <th>Kontak PIC</th>
+                                <th>Email</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="ref-code">PT. Cloud Server Indonesia</td>
+                                <td>Hosting & Infrastruktur</td>
+                                <td>0811-9988-7766</td>
+                                <td>billing@cloudserver.id</td>
+                                <td>
+                                    <span class="action-link">Edit</span>
+                                    <span class="action-link text-danger">Hapus</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- KONTEN TAB 3: DATA LAYANAN / PRODUK -->
+            <div id="tab-layanan" class="tab-content">
+                <div class="action-bar">
+                    <input type="text" class="search-input" placeholder="Cari Nama Layanan atau Produk...">
+                    <button type="button" class="btn btn-primary">+ Tambah Layanan</button>
+                </div>
+
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Kode</th>
+                                <th>Nama Layanan / Produk</th>
+                                <th>Satuan</th>
+                                <th>Harga Standar</th>
+                                <th>aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="ref-code">SRV-001</td>
+                                <td>Pengembangan Aplikasi Web Custom</td>
+                                <td>Lot</td>
+                                <td>Rp 25.000.000</td>
+                                <td>
+                                    <span class="action-link">Edit</span>
+                                    <span class="action-link text-danger">Hapus</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
