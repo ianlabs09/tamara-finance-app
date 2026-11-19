@@ -584,3 +584,62 @@ tr:hover {
 .text-danger {
     color:var(--danger-red);
 }
+
+/* 12. SALES MODULE EXTRAS: PO BADGES, SMALL BUTTONS & PAGINATION */
+
+.code-primary {
+    font-weight: 600;
+    color: var(--primary-blue);
+}
+
+.text-accent {
+    color: var(--pink-accent);
+}
+
+.badge-proses {
+    background-color: #fef08a;
+    color: #854d0e;
+}
+
+.badge-draft {
+    background-color: #f1f5f9;
+    color: #475569;
+}
+
+.btn-sm {
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 11px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 25px;
+    gap: 8px;
+}
+
+.page-btn {
+    padding: 6px 14px;
+    border: 1px solid var(--border-color);
+    background-color: #ffffff;
+    border-radius: 6px;
+    cursor: pointer;
+    color: var(--text-muted);
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    transition: all 0.2s ease;
+}
+
+.page-btn:hover {
+    border-color: var(--primary-blue);
+    color: var(--primary-blue);
+}
+
+.page-btn.active {
+    background-color: var(--primary-blue);
+    color: #ffffff;
+    border-color: var(--primary-blue);
+}
+

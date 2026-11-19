@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modul Penjualan - Aplikasi Keuangan TAMARA</title>
+
+    <!-- 1. Memanggil Font 'Inter' dari Google Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- 2. Menghubungkan ke file CSS terpusat kita -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- BAGIAN KIRI: Sidebar Navigasi -->
+    <aside class="sidebar">
+        <div class="logo-container">
+            <img src="assets/img/logo-trid.png" alt="Logo Tamara">
+        </div>
+
+        <nav class="menu-container">
+            <a href="index.html" class="menu-item">Dashboard</a>
+            <a href="master-data.html" class="menu-item">Master Data</a>
+            <a href="penjualan.html" class="menu-item active">Modul Penjualan</a>
+            <a href="keuangan.html" class="menu-item">Modul Keuangan</a>
+            <a href="laporan.html" class="menu-item">Laporan</a>
+            <a href="pengaturan.html" class="menu-item">Pengaturan</a>
+        </nav>
+    </aside>
+    <main class="main-content">
+        <!-- Bilah Atas (Topbar) -->
+        <header class="topbar">
+            <div class="topbar-title">Modul Penjualan</div>
+            <div class="user-profile">
+                <span class="user-name">Admin Keuangan</span>
+                <div class="avatar">AK</div>
+            </div>
+        </header>
+
+        <section class="content-area">
+            <h1 class="page-title">Modul Penjualan</h1>
+
+            <div class="tabs">
+                <button type="button" class="tab active" data-target="tab-po">Daftar Purchase Order (PO)</button>
+                <button type="button" class="tab" data-target="tab-invoice">Daftar Invoice (Tagihan)</button>
+            </div>
+
+            <!-- KONTEN TAB 1: DAFTAR PURCHASE ORDER (PO) -->
+            <div id="tab-po" class="tab-content active">
+                <div class="action-bar">
+                    <div class="filter-group">
+                        <input type="text" class="search-input" placeholder="Cari No.PO atau Nama Klien...">
+                        <select class="filter-select">
+                            <option value="">Semua Status PO</option>
+                            <option value="baru">PO Baru</option>
+                            <option value="proses">Sedang Dikerjakan</option>
+                            <option value="selesai">Selesai / Ditagihkan</option>
+                        </select>
+                    </div>
+                    <button type="button" class="btn btn-secondary">+ Input PO Baru</button>
+                </div>
+
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>No. PO</th>
+                                <th>Tanggal</th>
+                                <th>Klien / Customer</th>
+                                <th>Nilai Proyek</th>
+                                <th>Status PO</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="code-primary">PO/CSA/26/P095522</td>
+                                <td>07 Ags 2026</td>
+                                <td>PT. Ciptajaya Sejahtera Abadi</td>
+                                <td class="ref-code">Rp 21.778.300</td>
+                                <td><span class="badge badge-po">Baru</span></td>
+                                <td>
+                                    <span class="action-link">Lihat Detail</span>
+                                    <button type="button" class="btn btn-primary btn-sm">Generate Invoice</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="code-primary">PO-TN-2026-099</td>
+                                <td>15 Sep 2026</td>
+                                <td>PT. Teknologi Nusantara</td>
+                                <td class="ref-code">Rp 12.500.000</td>
+                                <td><span class="badge badge-proses">Diproses</span></td>
+                                <td>
+                                    <span class="action-link">Lihat Detail</span>
+                                    <button type="button" class="btn btn-primary btn-sm">Generate Invoice</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="code-primary">PO-DIS-26-01</td>
+                                <td>10 Sep 2026</td>
+                                <td>Dinas Komunikasi & Informatika</td>
+                                <td class="ref-code">Rp 28.000.000</td>
+                                <td><span class="badge badge-lunas">Ditagihkan</span></td>
+                                <td>
+                                    <span class="action-link">Lihat Detail</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="pagination">
+                        <button type="button" class="page-btn active">1</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- KONTEN TAB 2: DAFTAR INVOICE (TAGIHAN) -->
+            <div id="tab-invoice" class="tab-content">
+                <div class="action-bar">
+                    <div class="filter-group">
+                        <input type="text" class="search-input" placeholder="Cari No. Invoice atau Nama Klien...">
+                        <select class="filter-select">
+                            <option value="">Semua Status Invoice</option>
+                            <option value="lunas">Lunas</option>
+                            <option value="belum">Belum</option>
+                            <option value="draft">Draft</option>
+                        </select>
+                    </div>
+                    <button type="button" class="btn btn-accent">+ Buat Invoice Manual</button>
+                </div>
+
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>No. Invoice</th>
+                                <th>Tanggal</th>
+                                <th>Klien / Customer</th>
+                                <th>Total Tagihan</th>
+                                <th>Status</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="code-primary">INV/2026/10/003</td>
+                                <td>01 Okt 2026</td>
+                                <td>PT. Teknologi Nusantara</td>
+                                <td class="ref-code">Rp 12.500.000</td>
+                                <td><span class="badge badge-belum">Belum Dibayar</span></td>
+                                <td>
+                                    <span class="action-link">Lihat</span>
+                                    <span class="action-link text-accent">Edit</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="code-primary">INV/2026/10/002</td>
+                                <td>28 Sep 2026</td>
+                                <td>CV. Makmur Jaya Abadi</td>
+                                <td class="ref-code">Rp 4.250.000</td>
+                                <td><span class="badge badge-lunas">Lunas</span></td>
+                                <td>
+                                    <span class="action-link">Lihat</span>
+                                    <span class="action-link">Unduh PDF</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="code-primary">INV/2026/09/015</td>
+                                <td>20 Sep 2026</td>
+                                <td>PT. Maju Mundur Sentosa</td>
+                                <td class="ref-code">Rp 7.800.000</td>
+                                <td><span class="badge badge-draft">Draft</span></td>
+                                <td>
+                                    <span class="action-link">Lihat</span>
+                                    <span class="action-link text-accent">Edit</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="pagination">
+                        <button type="button" class="page-btn">Sebelumnya</button>
+                        <button type="button" class="page-btn active">1</button>
+                        <button type="button" class="page-btn">2</button>
+                        <button type="button" class="page-btn">3</button>
+                        <button type="button" class="page-btn">Selanjutnya</button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+
+    <!-- 3. Memanggil file JavaScript terpusat -->
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
