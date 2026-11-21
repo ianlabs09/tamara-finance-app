@@ -33,9 +33,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const container = bar.closest('.tab-content') || bar.closest('.content-area');
         if (!container) return;
 
-        const tableRows = container.querySelectorAll('tbody tr');
-
         function filterTable() {
+            const tableRows = container.querySelectorAll('tbody tr');
             const keyword = searchInput ? searchInput.value.toLowerCase().trim() : '';
             const selectedStatus = (filterSelect && filterSelect.id !== 'filter-month')
                 ? filterSelect.value.toLowerCase()
@@ -63,6 +62,77 @@ document.addEventListener('DOMContentLoaded', function() {
             filterSelect.addEventListener('change', filterTable);
         }
     });
+    // 3. LOGIKA MODAL POP-UP & SIMULASI TAMBAH DATA KLIEN
+    const modalTriggers = document.querySelectorAll('[data-modal]');
+    const modalOverlays = document.querySelectorAll('.modal-overlay');
+
+    modalTriggers.forEach(function (trigger) {
+        trigger.addEventListener('click', function () {
+            const modalId = trigger.getAttribute('data-modal');
+            const targetModal = document.getElementById(modalId);
+            if (targetModal) {
+                targetModal.classList.add('active');
+            }
+        });
+    });
+
+    modalOverlays.forEach(function (overlay) {
+        const closeBtn = overlay.querySelector('.modal-close');
+        const cancelBtn = overlay.querySelector('.btn-cancel');
+
+        if (closeBtn) {
+            closeBtn.addEventListener('click', function () {
+                overlay.classList.remove('active');
+            });
+        }
+
+        if (cancelBtn) {
+            cancelBtn.addEventListener('click', function () {
+                overlay.classList.remove('active');
+            });
+        }
+
+        overlay.addEventListener('click', function (e) {
+            if (e.target === overlay) {
+                overlay.classList.remove('active');
+            }
+        });
+    });
+
+    const formKlien = document.getElementById('form-tambah-klien');
+    if (formKlien) {
+        formKlien.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const namaPerusahaan = document.getElementById('input-nama-perusahaan').value.trim();
+            const namaPic = document.getElementById('input-nama-pic').value.trim();
+            const telepon = document.getElementById('input-telepon').value.trim();
+            const email = document.getElementById('input-email').value.trim();
+
+            const tbodyKlien = document.querySelector('#tab-klien tbody');
+            if (tbodyKlien) {
+                const newRow = `
+                    <tr>
+                        <td class="ref-code">${namaPerusahaan}</td>
+                        <td>${namaPic}</td>
+                        <td>${telepon}</td>
+                        <td>${email}</td>
+                        <td>
+                            <span class="action-link">Edit</span>
+                            <span class="action-link text-danger">Hapus</span>
+                        </td>
+                    </tr>
+                `;
+                tbodyKlien.insertAdjacentHTML('beforeend', newRow);
+            }
+
+            formKlien.reset();
+            const modalKlien = document.getElementById('modal-klien');
+            if (modalKlien) {
+                modalKlien.classList.remove('active');
+            }
+        });
+    }
 });
 
 

@@ -56,7 +56,7 @@
             <div id="tab-klien" class="tab-content active">
                 <div class="action-bar">
                     <input type="text" class="search-input" placeholder="Cari Nama Perusahaan atau PIC...">
-                    <button type="button" class="btn btn-primary">+ Tambah Klien</button>
+                    <button type="button" class="btn btn-primary" data-modal="modal-klien">+ Tambah Klien</button>
                 </div>
 
                 <div class="table-container">
@@ -144,7 +144,7 @@
                                 <th>Nama Layanan / Produk</th>
                                 <th>Satuan</th>
                                 <th>Harga Standar</th>
-                                <th>aksi</th>
+                                <th>Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -166,6 +166,44 @@
         </section>
 
     </main>
+
+
+    <!-- MODAL POP-UP: TAMBAH KLIEN -->
+     <div id="modal-klien" class="modal-overlay">
+        <div class="modal-box">
+            <div class="modal-header">
+                <h2 class="modal-title">Tambah Data Klien Baru</h2>
+                <button type="button" class="modal-close">&times;</button>
+            </div>
+            
+            <form id="form-tambah-klien">
+                <div class="form-group">
+                    <label for="input-nama-perusahaan" class="form-label">Nama Perusahaan</label>
+                    <input type="text" id="input-nama-perusahaan" class="form-control" placeholder="Contoh: PT. Maju Bersama" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="input-nama-pic" class="form-label">Nama PIC</label>
+                    <input type="text" id="input-nama-pic" class="form-control" placeholder="Contoh: Andi Wijaya" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="input-telepon" class="form-label">Nomor Telepon</label>
+                    <input type="text" id="input-telepon" class="form-control" placeholder="Contoh: 0812-3456-7890" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="input-email" class="form-label">Email</label>
+                    <input type="email" id="input-email" class="form-control" placeholder="finance@majubersama.co.id" required>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-cancel">Batal</button>
+                    <button type="submit" class="btn btn-primary">Simpan Data</button>
+                </div>
+            </form>
+        </div>
+     </div>
 
 
 
