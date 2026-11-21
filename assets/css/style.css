@@ -582,7 +582,7 @@ tr:hover {
 }
 
 .text-danger {
-    color:var(--danger-red);
+    color: var(--danger-red);
 }
 
 /* 12. SALES MODULE EXTRAS: PO BADGES, SMALL BUTTONS & PAGINATION */
@@ -642,4 +642,3 @@ tr:hover {
     color: #ffffff;
     border-color: var(--primary-blue);
 }
-
